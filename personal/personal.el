@@ -38,3 +38,8 @@
 
 ;; Set xml indentation to 2 spaces
 (setq nxml-child-indent 2 nxml-attribute-indent 2)
+
+(use-package smartparens :ensure t)
+(require 'smartparens)
+
+(smartparens-strict-mode)
