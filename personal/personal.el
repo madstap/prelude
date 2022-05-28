@@ -42,4 +42,11 @@
 (use-package smartparens :ensure t)
 (require 'smartparens)
 
-(smartparens-strict-mode)
+(smartparens-global-strict-mode)
+
+(global-set-key (kbd "M-ç") 'comment-dwim)
+
+;; This is the recommended way, but doesn't seem to work for me :shrug:
+;; (setq prelude-guru nil)
+
+(guru-mode -1)
