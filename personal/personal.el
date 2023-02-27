@@ -50,3 +50,18 @@
 ;; (setq prelude-guru nil)
 
 (guru-mode -1)
+
+(require 'prelude-lsp)
+
+(add-to-list 'default-frame-alist
+             '(font . "Comic Mono"))
+
+(defun unfill-region (beg end)
+  "Unfill the region, joining text paragraphs into a single
+    logical line.  This is useful, e.g., for use with
+    `visual-line-mode'."
+  (interactive "*r")
+  (let ((fill-column (point-max)))
+    (fill-region beg end)))
+
+(global-set-key (kbd "M-C-q") 'unfill-region)
