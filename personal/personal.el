@@ -65,3 +65,8 @@
     (fill-region beg end)))
 
 (global-set-key (kbd "M-C-q") 'unfill-region)
+
+
+(use-package digit-groups
+  :config
+  (digit-groups-global-mode t))
